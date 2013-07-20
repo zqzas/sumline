@@ -1,6 +1,7 @@
 
 import web
 import os
+from bae.api import logging
 
 urls = (
     '/', 'Hello' 
@@ -15,9 +16,9 @@ class Hello:
       	q = web.input(q1=None)
       	q = web.input(q2=None)
       	query = None
-        if hasattr(i, 'q1'):
+        if hasattr(q, 'q1'):
             query = q.q1
-        elif hasattr(i, 'q2'):
+        elif hasattr(q, 'q2'):
             query = q.q2
         if query:
             # TODO call server
