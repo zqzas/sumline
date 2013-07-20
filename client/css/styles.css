@@ -8,7 +8,7 @@
 }
 
 
-.search-form input[type="submit"], input[type="text"] {
+.search-form input[type="button"], input[type="text"] {
     height:34px !important;
 }
 
