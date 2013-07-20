@@ -10,7 +10,7 @@ class Test(unittest.TestCase):
         from urlencoder import genurl
         from datetime import date
         
-        the_date = date(2013, 7, 19)
+        the_date = date(2013, 7, 8)
         return genurl(query, the_date)
 
     def genurl_web(self, query):

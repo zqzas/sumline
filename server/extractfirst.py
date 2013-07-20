@@ -21,6 +21,7 @@ def extract_first(url):
     @return: (source_url, news_title, source_title, time, amount)
 
     '''
+    print '-----', url, '\n------'
 
     html = urllib2.urlopen(url).read()
     amount = html[html.find(amount_sig) + len(amount_sig) : ]
@@ -87,15 +88,6 @@ def extract_web_num(url):
     amount = int(amount[ : cnt].replace(',', ''))
 
     return amount
-
-
-
-
-
-
-
-
-
 
 
 
