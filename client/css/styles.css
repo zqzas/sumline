@@ -21,10 +21,20 @@
   font-size: 16px;
 }
 
-.visible-phone img {
+.small-pic img {
   max-height: 70px;
+}
+
+.very-small-pic img {
+  max-height: 50px;
+  float: left;
 }
 
 .vspace {
   height: 100px;
+}
+
+footer {
+  margin-bottom: 20px;
+  margin-left: 20px;
 }
