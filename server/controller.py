@@ -48,7 +48,7 @@ def put_data(query, data):
     @json       : (query, [(source_url, news_title, source_title, time, news_amount, main_content, web_amount)])
     '''
 
-    json_content = []
+    json_content = {'query' : query, 'data' : []}
 
     for item in data:
         item = list(item[1])
@@ -56,7 +56,8 @@ def put_data(query, data):
             if type(item[index]) == type(123):
                 continue
             item[index] = item[index].decode('gbk')
-            
+
+                    
 
         print '*' * 30, item[0]
         source_main_content = extract_main_frame(item[0])
@@ -65,9 +66,19 @@ def put_data(query, data):
         item.append(source_main_content)
         item.append(source_web_amount)
 
-        json_content.append(item)
+        dic = {}
+        dic['source_url'] = item[0]
+        dic['news_title'] = item[1]
+        dic['source_title'] = item[2]
+        dic['time'] = item[3]
+        dic['news_amount'] = item[4]
+        dic['content'] = item[5]
+        dic['web_amount'] = item[6]
 
-    json_content = json.dumps((query, json_content))
+
+        json_content['data'].append(dic)
+
+    json_content = json.dumps(json_content)
 
     fout = open(query + '.json', 'w')
     fout.write(json_content)
