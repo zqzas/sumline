@@ -12,7 +12,9 @@ amount_web_sig = '<span class="nums" style="margin-left:120px">'
 
 
 def strip_html_tags(html):
-    return re.sub('<[^<]+?>', '', html)
+    html = re.sub('<[^<]+?>', '', html)
+    return re.sub('&#[0-9]+;', '', html)
+
 
 def extract_first(url):
     '''
@@ -117,7 +119,7 @@ def extract_main_frame(url):
 if __name__ == '__main__':
     print extract_first("http://news.baidu.com/ns?from=news&cl=2&bt=1374163200&y0=2013&m0=07&d0=19&y1=2013&m1=07&d1=19&et=1374249599&q1=%BA%AB%D1%C7%BA%BD%BF%D5&submit=%B0%D9%B6%C8%D2%BB%CF%C2&q3=&q4=&mt=0&lm=&s=2&begin_date=2013-07-19&end_date=2013-07-19&tn=newsdy&ct1=1&ct=1&rn=20&q6=")
 
-    #print extract_main_frame('http://news.enorth.com.cn/system/2013/07/19/011159841.shtml')
+    print extract_main_frame('http://news.enorth.com.cn/system/2013/07/19/011159841.shtml')
     print extract_web_num('http://www.baidu.com/s?wd=%BA%AB%D1%C7%BA%BD%BF%D5')
     print extract_web_num('http://www.baidu.com/s?wd=fasdfasdfasdfasdfasfdasdf14123edfasdf')
 
