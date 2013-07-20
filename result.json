@@ -1,0 +1,118 @@
+
+{
+    "timeline":
+    {
+        "headline":"Fudan Street",
+        "type":"default",
+		"text":"你好　History of a small street.",
+		"asset":
+        {
+			"media":"http://fdumaya.com/content/fudan-campus-gate.jpg",
+            "credit":"",
+            "caption":""
+        },
+
+		
+        "date": [
+            {
+                "startDate":"2013,4,19,10,19",
+                "headline":"你好　It's a place of love and memories!",
+                "text":"<p>MxixianLJ</p>",
+                "asset":
+                {
+                    "media":"http://fdumaya.com/content/e1.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2012,11,18,19,03",
+                "headline":"Every Satursday I would like to have a cup of coco milk tea in campus life center. It is part of my life.",
+                "text":"<p>Posted by Yanlingjun</p>",
+                "asset":
+                {
+                    "media":"http://fdumaya.com/content/e2.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+			{
+                "startDate":"2012,11,15,9,00",
+                "headline":"I remembered that someone kept a pet rabbit in the bookstore. It's a quite fat one.",
+                "text":"<p>Posted by Zhishizhi</p>",
+                "asset":
+                {
+                    "media":"http://fdumaya.com/content/e3.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+			{
+                "startDate":"2012,11,10,10,20",
+                "headline":" We will miss it.",
+                "text":"<p>Posted by Carolingwang</p>",
+                "asset":
+                {
+                    "media":"http://fdumaya.com/content/e4.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+			{
+                "startDate":"2012,10,28,20,00",
+                "headline":" I met my wife and fell in love with her here. ",
+                "text":"<p>Posted by Zosan</p>",
+                "asset":
+                {
+                    "media":"http://fdumaya.com/content/e5.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+			{
+                "startDate":"2012,10,28,10,02",
+                "headline":" I spent my time with my best friend there.  ",
+                "text":"<p>Posted by Angeryang</p>",
+                "asset":
+                {
+                    "media":"",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+			{
+                "startDate":"2012,10,20,18,34",
+                "headline":"Bookstore. Coffee. Coco milk tea. Countless passerby. ",
+                "text":"<p>Posted by Xiaodaishen</p>",
+                "asset":
+                {
+                    "media":"http://fdumaya.com/content/e6.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+			{
+                "startDate":"2012,10,19,16,22",
+                "headline":"You must have been there before.",
+                "text":"<p>Posted by Bulanda</p>",
+                "asset":
+                {
+                    "media":"http://fdumaya.com/content/e7.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+			{
+                "startDate":"2012,10,15,16,55",
+                "headline":"And then the one day you find ten years have got behind you",
+                "text":"<p>Posted by zhangfei</p>",
+                "asset":
+                {
+                    "media":"",
+                    "credit":"",
+                    "caption":""
+                }
+            }
+        ]
+    }
+}
