@@ -1,0 +1,22 @@
+
+#logo {
+  margin-top: 50px ;
+}
+
+#search-form {
+  margin-top: 20px;
+}
+
+.search-form input[type="text"] {
+   height: 34px;
+   font-size: 18px;
+}
+
+#slogan {
+  margin-top: 10px;
+}
+
+#slogan p {
+  text-align: center;
+  font-size: 16px;
+}
