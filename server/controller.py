@@ -6,9 +6,9 @@ import json
 
 date_today = datetime.date.today()
 
-RANGE_DAYS = 60
-PAST_DAYS = 15
-FUTURE_DAYS = 45
+RANGE_DAYS = 180
+PAST_DAYS = 30
+FUTURE_DAYS = 50
 
 def find_peak(query):
     '''
@@ -52,15 +52,20 @@ def put_data(query, data):
 
     for item in data:
         item = list(item[1])
+        if item[4] == 0:
+            continue
         for index in xrange(len(item)):
-            if type(item[index]) == type(123):
+            if type(item[index]) == type(123) or item[index] == None:
                 continue
             item[index] = item[index].decode('gbk')
 
                     
 
         print '*' * 30, item[0]
-        source_main_content = extract_main_frame(item[0])
+        if item[0]:
+            source_main_content = extract_main_frame(item[0])
+        else:
+            source_main_content = ''
         source_web_amount = extract_web_num(genurl_web(item[1]))
 
         item.append(source_main_content)
@@ -82,6 +87,25 @@ def put_data(query, data):
 
     fout = open(query + '.json', 'w')
     fout.write(json_content)
+
+'''
+def trans_date(date):
+    datetime
+
+def trans_to_timeline(data):
+    tl = {'timeline': {'headline': '', 'type': 'default', 'text': '', 'startDate': '', 'date': 
+        [
+        ]}}
+
+
+    tl['timeline']['headline'] = data['query']
+
+    array = []
+    for rec in data:
+        item = {'startDate': '', 'headline': '', 'text': '', "asset": {'media': '', 'credit': '', 'caption': ''}}
+        item[
+
+'''
 
 
 
