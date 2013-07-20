@@ -88,35 +88,54 @@ def put_data(query, data):
     fout = open(query + '.json', 'w')
     fout.write(json_content)
 
-'''
 def trans_date(date):
-    datetime
+    return date.replace(':', ',').replace('-', ',').replace(' ',',').replace(',0',',')
+
 
 def trans_to_timeline(data):
-    tl = {'timeline': {'headline': '', 'type': 'default', 'text': '', 'startDate': '', 'date': 
+    tl = {'timeline': {'headline': data['query'], 'type': 'default', 'text': '', 'startDate': '', 'date': 
         [
         ]}}
 
 
-    tl['timeline']['headline'] = data['query']
-
     array = []
+    data = data['data']
     for rec in data:
         item = {'startDate': '', 'headline': '', 'text': '', "asset": {'media': '', 'credit': '', 'caption': ''}}
-        item[
+        item['startDate'] = trans_date(rec['time'])
+        item['headline'] = rec['news_title']
+        item['text'] = rec['content'] + '\n' + rec['source_url']
 
-'''
+        array.append(item)
+
+    tl['timeline']['date'] = array
+
+    json_content = json.dumps(tl, indent = 4)
+
+    fout = open("result.json", "w")
+
+    fout.write(json_content)
+
+    return json_content
 
 
 
+
+def load_json(fin):
+    fin = open(fin, 'r')
+    return json.loads(fin.read())
 
 
 
 if __name__ == '__main__':
     query = u'韩亚航空'
-    data =  find_peak(query)
-    print data
-    put_data(query, data)
+    #data =  find_peak(query)
+    #print data
+    #put_data(query, data)
+    data = load_json('demo.json')
+    print trans_to_timeline(data)
+
+
 
 
 
