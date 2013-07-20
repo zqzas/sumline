@@ -13,8 +13,8 @@ render = web.template.render(templates_root)
  
 class Hello:        
     def GET(self):
-      	q = web.input(q1=None)
-      	q = web.input(q2=None)
+      	q = web.input()
+      	q = web.input()
       	query = None
         if hasattr(q, 'q1'):
             query = q.q1
@@ -23,7 +23,7 @@ class Hello:
         if query:
             # TODO call server
             return render.search()
-        return render.index()
+        return render.the_index()
  
 app = web.application(urls, globals()).wsgifunc()
  
