@@ -100,7 +100,12 @@ def extract_main_frame(url):
     '''
 
     html = urllib2.urlopen(url).read()
-    main_content = strip_html_tags(Document(html).summary())
+    if html == None or html == '':
+        return ''
+    try:
+        main_content = strip_html_tags(Document(html).summary())
+    except:
+        return ''
     return main_content
     
 
