@@ -8,7 +8,7 @@ urls = (
 )
  
 app_root = os.path.dirname(__file__)
-templates_root = os.path.join(app_root, 'client')
+templates_root = app_root   # os.path.join(app_root, 'client')
 render = web.template.render(templates_root)
  
 class Hello:        
