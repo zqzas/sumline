@@ -9,26 +9,35 @@
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
   </head>
+
   <body>
     <div class="container">
-      <div class="row">
+
+    <div class="row">
       <div id="logo" class="span2 offset5">
         <img src="img/logo.png" alt="Quidditch logo" />
       </div>
+    </div>
 
-      <div id="search-form" class="search-form span10 offset1">
-        <div class="input-append">
-          <input class="span10" id="appendedInputButton" type="text" placeholder="试试搜索 91无线">
-          <button class="btn btn-large btn-success" type="button">Go!</button>
-        </div>
+    <div class="row">
+      <div id="search-form" class="span6 offset3">
+        <form class="form-search">
+          <div class="input-append" class="span6">
+            <input type="text" class="search-query input-xxlarge">
+            <button type="submit" class="btn btn-success">Search</button>
+          </div>
+        </form>
       </div>
+    </div>
 
+    <div class="row">
       <div id="slogan" class="span4 offset4">
         <p>身未动，心已远</p>
       </div>
-      </div>
     </div>
-    <script src="http://code.jquery.com/jquery.js"></script>
+    <hr>
+    </div>
+    <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

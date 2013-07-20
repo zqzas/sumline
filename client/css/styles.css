@@ -7,15 +7,6 @@
   margin-top: 20px;
 }
 
-
-.search-form input[type="button"], input[type="text"] {
-    height:34px !important;
-}
-
-.search-form input[type="text"] {
-   font-size: 18px;
-}
-
 #slogan {
   margin-top: 10px;
 }
