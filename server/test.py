@@ -1,26 +1,36 @@
 # coding=utf8
-from inspect import ismethod
+import unittest
 
-class Test():
-    def test_genurl(self):
+class Test(unittest.TestCase):
+    #query_set = [u'韩亚航空', u'阿拉法特', u'马浩'， u'戴涵俊', u'啊速读法速读法舒服1啊速读法暗示']
+    def setUp(self):
+        self.query_set = [u'韩亚', u'阿拉法特', u'马浩', u'戴涵俊', u'1223jas;kfaks;df;jas啊速读法舒服大是大123123123非']
+
+    def genurl(self, query):
         from urlencoder import genurl
         from datetime import date
-        query = u'韩亚航空'
+        
         the_date = date(2013, 7, 19)
-        print genurl(query, the_date)
+        return genurl(query, the_date)
 
-    def test_geturl_web(self):
+    def genurl_web(self, query):
         from urlencoder import genurl_web
-        query = u'韩亚航空'
-        print genurl_web(query)
+        
+        return genurl_web(query)
 
+    def test_extract_first(self):
+        from extractfirst import extract_first
+        for query in self.query_set:
+            url = self.genurl(query)
+            print extract_first(url)
 
-def call_all(obj):
-    for name in dir(obj):
-        attribute = getattr(obj, name)
-        if ismethod(attribute):
-            attribute()
-    
+    def test_web_num(self):
+        from extractfirst import extract_web_num
+        for query in self.query_set:
+            url = self.genurl_web(query)
+            print extract_web_num(url)
+
 if __name__ == '__main__':
-    call_all(Test())
+    print 'hh'
+    unittest.main()
 
