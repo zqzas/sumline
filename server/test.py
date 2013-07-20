@@ -9,6 +9,12 @@ class Test():
         the_date = date(2013, 7, 19)
         print genurl(query, the_date)
 
+    def test_geturl_web(self):
+        from urlencoder import genurl_web
+        query = u'韩亚航空'
+        print genurl_web(query)
+
+
 def call_all(obj):
     for name in dir(obj):
         attribute = getattr(obj, name)
