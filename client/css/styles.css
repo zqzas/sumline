@@ -1,6 +1,11 @@
 
-#logo {
-  margin-top: 50px ;
+#logo,#logo-mobile {
+  margin-top: 50px;
+}
+
+#logo img {
+  max-height: 140px;
+  // max-width: 100%;
 }
 
 #search-form {
@@ -14,4 +19,8 @@
 #slogan p {
   text-align: center;
   font-size: 16px;
+}
+
+.visible-phone img {
+  max-height: 70px;
 }

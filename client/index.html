@@ -13,17 +13,20 @@
   <body>
     <div class="container">
 
-    <div class="row">
-      <div id="logo" class="span2 offset5">
-        <img src="img/logo.png" alt="Quidditch logo" />
+    <div class="row pagination-centered">
+      <div id="logo" class="span2 offset5 hidden-phone">
+        <img class="" src="img/logo.png" alt="Quidditch logo" />
+      </div>
+      <div id="logo-mobile" class="span2 offset5 visible-phone">
+        <img class="" src="img/logo.png" alt="Quidditch logo" />
       </div>
     </div>
 
-    <div class="row">
-      <div id="search-form" class="span6 offset3">
+    <div class="row pagination-centered">
+      <div id="search-form" class="span8 offset2">
         <form class="form-search">
-          <div class="input-append" class="span6">
-            <input type="text" class="search-query input-xxlarge">
+          <div class="input-append">
+            <input type="text" class="search-query span7">
             <button type="submit" class="btn btn-success">Search</button>
           </div>
         </form>
