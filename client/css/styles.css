@@ -7,8 +7,12 @@
   margin-top: 20px;
 }
 
+
+.search-form input[type="submit"], input[type="text"] {
+    height:34px !important;
+}
+
 .search-form input[type="text"] {
-   height: 34px;
    font-size: 18px;
 }
 
