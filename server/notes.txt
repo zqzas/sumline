@@ -1,0 +1,26 @@
+http://news.baidu.com/ns?from=news&cl=2&bt=1374249600&y0=2013&m0=7&d0=20&y1=2013&m1=7&d1=20&et=1374335999&q1=91%CE%DE%CF%DF&submit=%B0%D9%B6%C8%D2%BB%CF%C2&q3=&q4=&mt=0&lm=&s=2&begin_date=2013-7-20&end_date=2013-7-20&tn=newsdy&ct1=1&ct=1&rn=20&q6=
+
+http://news.baidu.com/ns?from=news&cl=2&bt={bt}&y0={y0}&m0={m0}&d0={d0}&y1={y1}&m1={m1}&d1={d1}&et={et}&q1={query}&submit=%B0%D9%B6%C8%D2%BB%CF%C2&q3=&q4=&mt=0&lm=&s=2&begin_date={begin_date}&end_date={end_date}&tn=newsdy&ct1=1&ct=1&rn=20&q6=
+
+
+from        = # default "news"
+cl          = class (search type)  # should be 2
+bt          = seconds count (unknown src) # 1374249600 +- days_to_today
+y0,m0,d0    = startdate # count from 1
+y1,m1,d1    = enddate   # count from 1
+et          = seconds count (ending point of a day) # bt + 86399
+q1          = the query
+submit      = the button name # should be "%B0%D9%B6%C8%D2%BB%CF%C2"
+q3          = include any # should be empty
+q4          = exclude keyword # should be empty
+mt          = TODO unknown # should be 0
+lm          = time internal limit # should be empty (dont know why)
+s           = unknown # should be 2
+begin_date = begin date
+end_date   = end date
+tn          = keyword position # should be "newsdy"
+ct1         = unknown # should be 1
+ct          = sorting rule (interest/time) # should be 1
+rn          = record number # default 20
+q6          = site-constraint # like "q6=sohu.com", TBD
+
