@@ -22,8 +22,8 @@ class Hello:
         elif hasattr(q, 'q2'):
             query = q.q2
         if query:
-            # TODO call server
-            from 
+            from controller import main
+            main(query)
             return render.search()
         # self.test_mongodb() # How-to use MongoDB
         return render.the_index()
