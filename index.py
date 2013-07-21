@@ -1,4 +1,4 @@
-
+# coding=utf8
 import web
 import os
 import sys
