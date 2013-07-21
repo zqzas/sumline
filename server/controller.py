@@ -128,7 +128,7 @@ def load_json(fin):
 
 def main(query):
     from dbaccess import save, fetch
-    raw = fetch({'query': query})
+    raw = fetch({'query': query}, 'dai')
     if not raw:
         # TODO
         pass
@@ -137,6 +137,8 @@ def main(query):
         output = open('server/result.json', 'w')
         output.write(json_data)
         output.close()
+        return True
+    return False
     #data =  find_peak(query)
     #print data
     #put_data(query, data)

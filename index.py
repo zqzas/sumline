@@ -23,8 +23,10 @@ class Main:
             query = q.q2
         if query:
             from controller import main
-            main(query)
-            return render.search()
+            name = 'server/result.json'
+            if main(query):
+                name = 'server/' + query + ".json"
+            return render.search(name)
         # self.test_mongodb() # How-to use MongoDB
         # self.demo_prepare()
         return render.the_index()
