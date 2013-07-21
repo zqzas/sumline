@@ -22,11 +22,12 @@
 }
 
 .small-pic img {
-  max-height: 70px;
+  max-height: 40px;
 }
 
 .very-small-pic img {
-  max-height: 50px;
+  margin-top: 5px;
+  max-height: 40px;
   float: left;
 }
 
