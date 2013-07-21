@@ -127,11 +127,21 @@ def load_json(fin):
 
 
 def main(query):
+    from dbaccess import save, fetch
+    raw = fetch({'query': query})
+    if not raw:
+        # TODO
+        pass
+    else:
+        json_data = raw['data']
+        output = open('server/result.json', 'w')
+        output.write(json_data)
+        output.close()
     #data =  find_peak(query)
     #print data
     #put_data(query, data)
-    data = load_json('demo.json')
-    print trans_to_timeline(data)
+    # data = load_json('demo.json')
+    # print trans_to_timeline(data)
 
 
 
