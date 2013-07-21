@@ -126,9 +126,7 @@ def load_json(fin):
     return json.loads(fin.read())
 
 
-
-if __name__ == '__main__':
-    query = u'韩亚航空'
+def main(query):
     #data =  find_peak(query)
     #print data
     #put_data(query, data)
@@ -137,6 +135,9 @@ if __name__ == '__main__':
 
 
 
+if __name__ == '__main__':
+    query = u'韩亚航空'
+    main(query)
 
 
 

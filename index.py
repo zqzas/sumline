@@ -23,6 +23,7 @@ class Hello:
             query = q.q2
         if query:
             # TODO call server
+            from 
             return render.search()
         # self.test_mongodb() # How-to use MongoDB
         return render.the_index()
