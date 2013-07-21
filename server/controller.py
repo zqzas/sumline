@@ -6,9 +6,9 @@ import json
 
 date_today = datetime.date.today()
 
-RANGE_DAYS = 180
-PAST_DAYS = 30
-FUTURE_DAYS = 50
+RANGE_DAYS = 120
+PAST_DAYS = 120 
+FUTURE_DAYS = 120
 
 def find_peak(query):
     '''
@@ -136,7 +136,7 @@ def main(query):
 
 
 if __name__ == '__main__':
-    query = u'韩亚航空'
+    query = u'微软整合部门'
     main(query)
 
 
