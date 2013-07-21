@@ -6,9 +6,9 @@ import json
 
 date_today = datetime.date.today()
 
-RANGE_DAYS = 90
-PAST_DAYS = 30
-FUTURE_DAYS = 50
+RANGE_DAYS = 120
+PAST_DAYS = 120 
+FUTURE_DAYS = 120
 
 def find_peak(query):
     '''
