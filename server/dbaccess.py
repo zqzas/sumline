@@ -12,7 +12,7 @@ def getdb():
 
 
 def save(data, table):
-    """data: [{'a': 1, 'b': 2}, {'a': 2, 'b': 1}]"""
+    """data: {'a': 1, 'b': 2}"""
     con, db = getdb()
     ware = db[table]
     result = ware.insert(data)
