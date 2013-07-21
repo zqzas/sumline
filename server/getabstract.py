@@ -9,14 +9,19 @@ def getUnicodeFromFile(filename):
             content = content + row
     return content.decode('gb18030').encode('utf8')
     
-def getSummary(key, content):
-    values = {'key': key, 'content': content}
+def getSummary(title, content):
+    values = {'key': 'mgwqQFlwPhUvO5Oy', 'title': title, 'content': content}
     f = urllib2.urlopen(url = 'http://api.tuofeng.cn/zhaiyao/article', data = urllib.urlencode(values) )
     result = f.read()
     resultJson = json.loads(result)
-    return resultJson["summary"]['middleAbstract']
+    try:
+        result = resultJson["summary"]['middleAbstract']
+        return result
+    except:
+        return ''
 
 if __name__ == '__main__':
     content = getUnicodeFromFile('test.txt')
-    a = getSummary('mgwqQFlwPhUvO5Oy', content)
+    title = 'hello world'
+    a = getSummary(title, content)
     print a
