@@ -6,7 +6,7 @@ import json
 
 date_today = datetime.date.today()
 
-RANGE_DAYS = 180
+RANGE_DAYS = 90
 PAST_DAYS = 30
 FUTURE_DAYS = 50
 
@@ -127,16 +127,16 @@ def load_json(fin):
 
 
 def main(query):
-    #data =  find_peak(query)
-    #print data
-    #put_data(query, data)
-    data = load_json('demo.json')
-    print trans_to_timeline(data)
+    data =  find_peak(query)
+    print data
+    put_data(query, data)
+    #data = load_json('demo.json')
+    #print trans_to_timeline(data)
 
 
 
 if __name__ == '__main__':
-    query = u'韩亚航空'
+    query = u'收购91无线'
     main(query)
 
 
