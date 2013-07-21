@@ -112,7 +112,8 @@ def extract_main_frame(url):
 
     '''
 
-    html = read_baidu(url)
+    #html = read_baidu(url)
+    html = urllib2.urlopen(url).read()
     if html == None or html == '':
         return ''
     try:
